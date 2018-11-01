@@ -1,0 +1,811 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{369175DF-0585-42CA-9203-5E58C9D9E2D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PROJECT_19</RootNamespace>
+    <AssemblyName>PROJECT_19</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.1.3\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Facebook.7.0.6\lib\net45\Facebook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\AssociationMember.cs" />
+    <Compile Include="Classes\Controller.cs" />
+    <Compile Include="Classes\Course.cs" />
+    <Compile Include="Classes\DBConnect.cs" />
+    <Compile Include="Classes\Sechedule.cs" />
+    <Compile Include="Classes\Secretary.cs" />
+    <Compile Include="Classes\SecretaryManager.cs" />
+    <Compile Include="Classes\Student.cs" />
+    <Compile Include="Classes\User.cs" />
+    <Compile Include="Files.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Files.Designer.cs">
+      <DependentUpon>Files.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AssosiationMember\MemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AssosiationMember\MemberForm.Designer.cs">
+      <DependentUpon>MemberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AssosiationMember\ShowReq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AssosiationMember\ShowReq.Designer.cs">
+      <DependentUpon>ShowReq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\Assignments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\Assignments.Designer.cs">
+      <DependentUpon>Assignments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\Calendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\Calendar.Designer.cs">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Secretary\chooseStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Secretary\chooseStudent.Designer.cs">
+      <DependentUpon>chooseStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\CourseDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\CourseDetails.Designer.cs">
+      <DependentUpon>CourseDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Secretary\CreateSecheduleHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Secretary\CreateSecheduleHome.Designer.cs">
+      <DependentUpon>CreateSecheduleHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\EmptyClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\EmptyClasses.Designer.cs">
+      <DependentUpon>EmptyClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\Exams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\Exams.Designer.cs">
+      <DependentUpon>Exams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\Holidays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\Holidays.Designer.cs">
+      <DependentUpon>Holidays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\RecHourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\RecHourse.Designer.cs">
+      <DependentUpon>RecHourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Secretary\SecertarySetCreatingDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Secretary\SecertarySetCreatingDate.Designer.cs">
+      <DependentUpon>SecertarySetCreatingDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SecretaryManager\AddSecretary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SecretaryManager\AddSecretary.Designer.cs">
+      <DependentUpon>AddSecretary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SecretaryManager\mangerSecretaryHom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SecretaryManager\mangerSecretaryHom.Designer.cs">
+      <DependentUpon>mangerSecretaryHom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Secretary\SecertaryAddCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Secretary\SecertaryAddCourse.Designer.cs">
+      <DependentUpon>SecertaryAddCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Secretary\SecertaryCreatShedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Secretary\SecertaryCreatShedule.Designer.cs">
+      <DependentUpon>SecertaryCreatShedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Secretary\SecretaryHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Secretary\SecretaryHome.Designer.cs">
+      <DependentUpon>SecretaryHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\StudentHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\StudentHome.Designer.cs">
+      <DependentUpon>StudentHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\Password.Designer.cs">
+      <DependentUpon>Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\Weeklyschedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcceptNewStudentsDH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcceptNewStudentsDH.Designer.cs">
+      <DependentUpon>AcceptNewStudentsDH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\Weeklyschedule.Designer.cs">
+      <DependentUpon>Weeklyschedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AcceptNewStudentsSA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcceptNewStudentsSA.Designer.cs">
+      <DependentUpon>AcceptNewStudentsSA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPreCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPreCourse.Designer.cs">
+      <DependentUpon>AddPreCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bad student_mode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bad student_mode.Designer.cs">
+      <DependentUpon>Bad student_mode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CallStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallStudent.Designer.cs">
+      <DependentUpon>CallStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cancelCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cancelCourse.Designer.cs">
+      <DependentUpon>cancelCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Celender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Celender.Designer.cs">
+      <DependentUpon>Celender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeLessons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeLessons.Designer.cs">
+      <DependentUpon>ChangeLessons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="connection.cs" />
+    <Compile Include="CourseDetail2.cs" />
+    <Compile Include="CourseDetails.cs" />
+    <Compile Include="DepartmentHead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentHead.Designer.cs">
+      <DependentUpon>DepartmentHead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentHead_courses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentHead_courses.Designer.cs">
+      <DependentUpon>DepartmentHead_courses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentHead_editing_users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentHead_editing_users.Designer.cs">
+      <DependentUpon>DepartmentHead_editing_users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentHead_lecturers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentHead_lecturers.Designer.cs">
+      <DependentUpon>DepartmentHead_lecturers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentHead_students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentHead_students.Designer.cs">
+      <DependentUpon>DepartmentHead_students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditingUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditingUser.Designer.cs">
+      <DependentUpon>EditingUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinalScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalScore.Designer.cs">
+      <DependentUpon>FinalScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiveGrades.cs" />
+    <Compile Include="HandelingRequset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HandelingRequset.Designer.cs">
+      <DependentUpon>HandelingRequset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer.Designer.cs">
+      <DependentUpon>Lecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer_AddLesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer_AddLesson.Designer.cs">
+      <DependentUpon>Lecturer_AddLesson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer_grades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer_grades.Designer.cs">
+      <DependentUpon>Lecturer_grades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer_lessons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer_lessons.Designer.cs">
+      <DependentUpon>Lecturer_lessons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlacementClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlacementClasses.Designer.cs">
+      <DependentUpon>PlacementClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlacementStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlacementStudents.Designer.cs">
+      <DependentUpon>PlacementStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlacmentTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlacmentTests.Designer.cs">
+      <DependentUpon>PlacmentTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registeretionCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registeretionCourse.Designer.cs">
+      <DependentUpon>registeretionCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Removelesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Removelesson.Designer.cs">
+      <DependentUpon>Removelesson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveStudent.Designer.cs">
+      <DependentUpon>RemoveStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RequsetExeptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequsetExeptions.Designer.cs">
+      <DependentUpon>RequsetExeptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary_department_courses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary_department_courses.Designer.cs">
+      <DependentUpon>Secretary_department_courses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary_department_schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary_department_schedule.Designer.cs">
+      <DependentUpon>Secretary_department_schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary_department_students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary_department_students.Designer.cs">
+      <DependentUpon>Secretary_department_students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecreteryAddLesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecreteryAddLesson.Designer.cs">
+      <DependentUpon>SecreteryAddLesson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecreteryCelender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecreteryCelender.Designer.cs">
+      <DependentUpon>SecreteryCelender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretery_department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretery_department.Designer.cs">
+      <DependentUpon>Secretery_department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetBadStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetBadStudent.Designer.cs">
+      <DependentUpon>SetBadStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowRegistrationTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowRegistrationTable.Designer.cs">
+      <DependentUpon>ShowRegistrationTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowTable.Designer.cs">
+      <DependentUpon>ShowTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowTableEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowTableEdit.Designer.cs">
+      <DependentUpon>ShowTableEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Special_dates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Special_dates.Designer.cs">
+      <DependentUpon>Special_dates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sreq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sreq.Designer.cs">
+      <DependentUpon>Sreq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAdministration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAdministration.Designer.cs">
+      <DependentUpon>StudentAdministration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAdministration_courses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAdministration_courses.Designer.cs">
+      <DependentUpon>StudentAdministration_courses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAdministration_students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAdministration_students.Designer.cs">
+      <DependentUpon>StudentAdministration_students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentRegistration.Designer.cs">
+      <DependentUpon>StudentRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestScore.Designer.cs">
+      <DependentUpon>TestScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="theFace\FacebookLoginDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="theFace\FacebookLoginDialog.Designer.cs">
+      <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="theFace\MiniJson.cs" />
+    <Compile Include="Tools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.cs" />
+    <EmbeddedResource Include="AcceptNewStudentsDH.resx">
+      <DependentUpon>AcceptNewStudentsDH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AcceptNewStudentsSA.resx">
+      <DependentUpon>AcceptNewStudentsSA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPreCourse.resx">
+      <DependentUpon>AddPreCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bad student_mode.resx">
+      <DependentUpon>Bad student_mode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CallStudent.resx">
+      <DependentUpon>CallStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cancelCourse.resx">
+      <DependentUpon>cancelCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Celender.resx">
+      <DependentUpon>Celender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeLessons.resx">
+      <DependentUpon>ChangeLessons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentHead.resx">
+      <DependentUpon>DepartmentHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentHead_courses.resx">
+      <DependentUpon>DepartmentHead_courses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentHead_editing_users.resx">
+      <DependentUpon>DepartmentHead_editing_users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentHead_lecturers.resx">
+      <DependentUpon>DepartmentHead_lecturers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentHead_students.resx">
+      <DependentUpon>DepartmentHead_students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditingUser.resx">
+      <DependentUpon>EditingUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Files.resx">
+      <DependentUpon>Files.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalScore.resx">
+      <DependentUpon>FinalScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AssosiationMember\ShowReq.resx">
+      <DependentUpon>ShowReq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandelingRequset.resx">
+      <DependentUpon>HandelingRequset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer.resx">
+      <DependentUpon>Lecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer_AddLesson.resx">
+      <DependentUpon>Lecturer_AddLesson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer_grades.resx">
+      <DependentUpon>Lecturer_grades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer_lessons.resx">
+      <DependentUpon>Lecturer_lessons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlacementClasses.resx">
+      <DependentUpon>PlacementClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AssosiationMember\MemberForm.resx">
+      <DependentUpon>MemberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\Assignments.resx">
+      <DependentUpon>Assignments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Secretary\chooseStudent.resx">
+      <DependentUpon>chooseStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\CourseDetails.resx">
+      <DependentUpon>CourseDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Secretary\CreateSecheduleHome.resx">
+      <DependentUpon>CreateSecheduleHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\EmptyClasses.resx">
+      <DependentUpon>EmptyClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\Exams.resx">
+      <DependentUpon>Exams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\Holidays.resx">
+      <DependentUpon>Holidays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\RecHourse.resx">
+      <DependentUpon>RecHourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Secretary\SecertarySetCreatingDate.resx">
+      <DependentUpon>SecertarySetCreatingDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SecretaryManager\AddSecretary.resx">
+      <DependentUpon>AddSecretary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SecretaryManager\mangerSecretaryHom.resx">
+      <DependentUpon>mangerSecretaryHom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Secretary\SecertaryCreatShedule.resx">
+      <DependentUpon>SecertaryCreatShedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Secretary\SecretaryHome.resx">
+      <DependentUpon>SecretaryHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\StudentHome.resx">
+      <DependentUpon>StudentHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\Password.resx">
+      <DependentUpon>Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\Weeklyschedule.resx">
+      <DependentUpon>Weeklyschedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlacementStudents.resx">
+      <DependentUpon>PlacementStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlacmentTests.resx">
+      <DependentUpon>PlacmentTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="registeretionCourse.resx">
+      <DependentUpon>registeretionCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Removelesson.resx">
+      <DependentUpon>Removelesson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveStudent.resx">
+      <DependentUpon>RemoveStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequsetExeptions.resx">
+      <DependentUpon>RequsetExeptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary_department_courses.resx">
+      <DependentUpon>Secretary_department_courses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary_department_schedule.resx">
+      <DependentUpon>Secretary_department_schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary_department_students.resx">
+      <DependentUpon>Secretary_department_students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecreteryAddLesson.resx">
+      <DependentUpon>SecreteryAddLesson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecreteryCelender.resx">
+      <DependentUpon>SecreteryCelender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretery_department.resx">
+      <DependentUpon>Secretery_department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetBadStudent.resx">
+      <DependentUpon>SetBadStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowRegistrationTable.resx">
+      <DependentUpon>ShowRegistrationTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowTable.resx">
+      <DependentUpon>ShowTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowTableEdit.resx">
+      <DependentUpon>ShowTableEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Special_dates.resx">
+      <DependentUpon>Special_dates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sreq.resx">
+      <DependentUpon>Sreq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentAdministration.resx">
+      <DependentUpon>StudentAdministration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentAdministration_courses.resx">
+      <DependentUpon>StudentAdministration_courses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentAdministration_students.resx">
+      <DependentUpon>StudentAdministration_students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentRegistration.resx">
+      <DependentUpon>StudentRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestScore.resx">
+      <DependentUpon>TestScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="theFace\FacebookLoginDialog.resx">
+      <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools.resx">
+      <DependentUpon>Tools.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".nuget\NuGet.Config" />
+    <None Include=".nuget\NuGet.targets" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="packages.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17620182_319119745172736_836031232025844056_o.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-and-white-person-icon-png-clipart-image-iconbug-com-g7EhRd-clipart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCE_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1491605635_profle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1491605793_profle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1491605859_profle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1491606503_Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1491606582_Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1491606684_Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s-l300.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\הורד.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".nuget\NuGet.exe" />
+    <None Include="Resources\facebook-login-b0a1a6da6836fdf16e3ea3e15a06a4a5.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+      if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+      xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+      if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+      xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
