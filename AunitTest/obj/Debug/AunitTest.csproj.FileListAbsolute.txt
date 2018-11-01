@@ -1,0 +1,11 @@
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\AunitTest\obj\Debug\AunitTest.csprojResolveAssemblyReference.cache
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\AunitTest\bin\Debug\AunitTest.dll
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\AunitTest\bin\Debug\AunitTest.pdb
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\AunitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\AunitTest\bin\Debug\PROJECT_19.exe
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\AunitTest\bin\Debug\Facebook.dll
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\AunitTest\bin\Debug\PROJECT_19.pdb
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\AunitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\AunitTest\bin\Debug\Facebook.xml
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\AunitTest\obj\Debug\AunitTest.dll
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\AunitTest\obj\Debug\AunitTest.pdb

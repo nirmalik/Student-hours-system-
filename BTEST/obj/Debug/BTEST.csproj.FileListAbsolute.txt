@@ -1,0 +1,11 @@
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\BTEST\bin\Debug\BTEST.dll
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\BTEST\bin\Debug\BTEST.pdb
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\BTEST\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\BTEST\bin\Debug\PROJECT_19.exe
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\BTEST\bin\Debug\PROJECT_19.pdb
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\BTEST\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\BTEST\obj\Debug\BTEST.csprojResolveAssemblyReference.cache
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\BTEST\obj\Debug\BTEST.dll
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\BTEST\obj\Debug\BTEST.pdb
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\BTEST\bin\Debug\Facebook.dll
+C:\Users\barak\Source\Repos\2017_BS_project19\PROJECT_19\BTEST\bin\Debug\Facebook.xml
